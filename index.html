@@ -1,7 +1,67 @@
 <html>
-  <body>
-    <h1>Hey I'm Ankita</h1>
-    <h2>Good to see you here</h2>
-  </body>
- </html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $("header").hover(function(){
+                $(this).css("background-color", "white");
+        });
+  });
+</script>
+<button>Animate !!!</button>
+<div style="background:yellow;height:60px;width:300px;position:relative;margin-top:10px;display:none;font-size:50px;">Hello World !!</div>
+
+    </head>
+    <body>
+        <!--<br><center><h1>Hasthkala</h1></body></center><br>-->
+        <header>
+            <a href="#" class="logo">Art<span>.</span></a>
+            <ul class="navigation">
+                <!--<li><h1><center>Hasthkala</center></h1></li>-->
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#banner">About</a></li>
+                <li><a href="#banner">Collections</a></li>
+                <li><a href="#banner">Design</a></li>
+                <li><a href="#banner">Explore Art</a></li>
+            </ul>
+        </header>
+        <section class="banner" id="banner">
+            <div class="content">
+                <h2></h2>
+                <p>
+                    Specificity is the means by which browsers decide which CSS property values are the
+                    most relevant to an element and, therefore, will be applied. Specificity is based on
+                    the matching rules which are composed of different sorts of CSS selectors.
+                </p>
+                <a href="#" class="btn">Our Collections</a>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="row">
+                <div class="col150">
+                    <h2 class="titleText"><span>A</span>bout Us</h2>
+                    <h1>Hey I'm Ankita</h1>
+                    <h2>Good to see you here</h2>
+                </div>
+                <div class="col150">
+                    <div class="imgBx">
+                        <img src="https://unitus.vc/wp-content/uploads/2014/07/Crafts.jpg">
+                    </div>
+                </div>
+            </div>
+        <!--<div class="collect">
+            
+        </div>-->
+        </section>
+        <script>
+            window.addEventListener('scroll', function(){
+                const header=document.querySelector('header');
+                header.classList.toggle("sticky", window.scrollY > 0);
+            });
+        </script>
+    </body>
+</html>
 theme: jekyll-theme-cayman
